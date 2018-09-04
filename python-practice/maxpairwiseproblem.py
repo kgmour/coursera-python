@@ -6,8 +6,10 @@ def max_pairs(length, values):
 
     nums = [int(t) for t in values.split()]
 
-    max_1 = max(nums)
-    max_2 = max([t for t in nums if t != max_1])
+    max_1_index = nums.index(max(nums))
+    max_1 = nums[max_1_index]
+    del nums[max_1_index]
+    max_2 = max(nums)
     return max_1 * max_2
 
 if __name__ == '__main__':
