@@ -7,8 +7,7 @@ def max_pairs(length, values):
     nums = [int(t) for t in values.split()]
 
     max_1_index = nums.index(max(nums))
-    max_1 = nums[max_1_index]
-    del nums[max_1_index]
+    max_1 = nums.pop(max_1_index)
     max_2 = max(nums)
     return max_1 * max_2
 
